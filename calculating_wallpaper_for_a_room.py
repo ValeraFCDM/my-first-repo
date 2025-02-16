@@ -53,7 +53,6 @@ def get_validate_input(parameter: str, input_type: type) -> int | float:
     :param parameter: str: описание запрашиваемого измерения (длина, количество и т.д.)
     :param input_type: type: int или float, в зависимости от запрашиваемого измерения
     :return: int | float: замер объекта для формирования параметров объекта Room()
-    :raise: ValueError: если пользователь ввел не число
     """
     number = None
     while True:
@@ -66,7 +65,6 @@ def get_validate_input(parameter: str, input_type: type) -> int | float:
             break
         print('Недопустимое значение!')
     return number
-
 
 room_length = get_validate_input('длина помещения', float)
 room_width = get_validate_input('ширина помещения', float)
